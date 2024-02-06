@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Individual Time Tracking Website">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Time Tracking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-Very-dark-blue md:min-h-screen md:flex md:items-center">
+    <div class="p-6 mx-auto max-w-lg md:max-w-7xl">
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 md:gap-x-6 gap-y-6">
+            <div class="bg-Dark-blue rounded-xl mx-auto md:row-span-2 w-full">
+                <div
+                    class="bg-Blue-original flex justify-center items-center p-7 space-x-4 rounded-xl md:flex-col md:items-start md:space-x-0 md:space-y-10">
+                    <img class="border-2 border-white rounded-full w-20 h-20" src="./images/image-jeremy.png"
+                        alt="Jeremy's profile picture">
+                    <div>
+                        <h4 class="text-sm text-white md:mb-5">Report for</h4>
+                        <h2 class="text-2xl text-white md:name-size font-light">Jeremy Robson</h2>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-evenly text-white p-4 rounded-xl md:flex-col md:items-start md:space-y-4">
+                    <button id="daily-button">
+                        <h3 class="text-base md:text-lg">Daily</h3>
+                    </button>
+                    <button id="weekly-button">
+                        <h3 class="text-base md:text-lg">Weekly</h3>
+                    </button>
+                    <button id="monthly-button">
+                        <h3 class="text-base md:text-lg">Monthly</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-Light-red-work rounded-xl mx-auto relative w-full">
+                <img class="absolute right-4 top-0" src="./images/icon-work.svg" alt="work logo">
+                <div
+                    class="bg-Dark-blue hover:bg-Desaturated-blue duration-300 cursor-pointer rounded-xl flex flex-col space-y-2 px-4 py-8 relative top-12 md:px-8 md:space-y-6 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base text-white">Work</h3>
+                        <img class="cursor-pointer" src="./images/icon-ellipsis.svg" alt="icon ellipsis">
+                    </div>
+                    <div class="flex items-center justify-between md:flex-col md:space-y-4 md:items-start">
+                        <h2 id="current-hours" class="text-4xl text-white md:size-hour">--hrs</h2>
+                        <h3 id="last-hours" class="text-sm text-white opacity-70 md:size-last">Last -- - --hrs</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Soft-blue-play rounded-xl mx-auto relative mt-12 md:mt-0 w-full">
+                <img class="absolute right-4 top-0" src="./images/icon-play.svg" alt="Play logo">
+                <div
+                    class="bg-Dark-blue hover:bg-Desaturated-blue duration-300 cursor-pointer rounded-xl flex flex-col space-y-2 px-4 py-8 relative top-12 md:px-8 md:space-y-6 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base text-white">Play</h3>
+                        <img class="cursor-pointer" src="./images/icon-ellipsis.svg" alt="icon ellipsis">
+                    </div>
+                    <div class="flex items-center justify-between md:flex-col md:space-y-4 md:items-start">
+                        <h2 id="current-hours" class="text-4xl text-white md:size-hour">--hrs</h2>
+                        <h3 id="last-hours" class="text-sm text-white opacity-70 md:size-last">Last -- - --hrs</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Light-red-study rounded-xl mx-auto relative mt-12 md:mt-0 w-full">
+                <img class="absolute right-4 top-0" src="./images/icon-study.svg" alt="study logo">
+                <div
+                    class="bg-Dark-blue hover:bg-Desaturated-blue duration-300 cursor-pointer rounded-xl flex flex-col space-y-2 px-4 py-8 relative top-12 md:px-8 md:space-y-6 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base text-white">Study</h3>
+                        <img class="cursor-pointer" src="./images/icon-ellipsis.svg" alt="icon ellipsis">
+                    </div>
+                    <div class="flex items-center justify-between md:flex-col md:space-y-4 md:items-start">
+                        <h2 id="current-hours" class="text-4xl text-white md:size-hour">--hrs</h2>
+                        <h3 id="last-hours" class="text-sm text-white opacity-70 md:size-last">Last -- - --hrs</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lime-green-exercise rounded-xl mx-auto relative mt-12 md:mt-0 w-full">
+                <img class="absolute right-4 top-0" src="./images/icon-exercise.svg" alt="Exercise logo">
+                <div
+                    class="bg-Dark-blue hover:bg-Desaturated-blue duration-300 cursor-pointer rounded-xl flex flex-col space-y-2 px-4 py-8 relative top-12 md:px-8 md:space-y-6 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base text-white">Exercise</h3>
+                        <img class="cursor-pointer" src="./images/icon-ellipsis.svg" alt="icon ellipsis">
+                    </div>
+                    <div class="flex items-center justify-between md:flex-col md:space-y-4 md:items-start">
+                        <h2 id="current-hours" class="text-4xl text-white md:size-hour">--hrs</h2>
+                        <h3 id="last-hours" class="text-sm text-white opacity-70 md:size-last">Last -- - --hrs</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Violet-social rounded-xl mx-auto relative mt-12 md:mt-0 w-full">
+                <img class="absolute right-4 top-0" src="./images/icon-social.svg" alt="Social logo">
+                <div
+                    class="bg-Dark-blue hover:bg-Desaturated-blue duration-300 cursor-pointer rounded-xl flex flex-col space-y-2 px-4 py-8 relative top-12 md:px-8 md:space-y-6 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base text-white">Social</h3>
+                        <img class="cursor-pointer" src="./images/icon-ellipsis.svg" alt="icon ellipsis">
+                    </div>
+                    <div class="flex items-center justify-between md:flex-col md:space-y-4 md:items-start">
+                        <h2 id="current-hours" class="text-4xl text-white md:size-hour">--hrs</h2>
+                        <h3 id="last-hours" class="text-sm text-white opacity-70 md:size-last">Last -- - --hrs</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Soft-orange-self-care rounded-xl mx-auto relative mt-12 md:mt-0 w-full">
+                <img class="absolute right-4 top-0" src="./images/icon-self-care.svg" alt="Self Care logo">
+                <div
+                    class="bg-Dark-blue hover:bg-Desaturated-blue duration-300 cursor-pointer rounded-xl flex flex-col space-y-2 px-4 py-8 relative top-12 md:px-8 md:space-y-6 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base text-white">Self Care</h3>
+                        <img class="cursor-pointer" src="./images/icon-ellipsis.svg" alt="icon ellipsis">
+                    </div>
+                    <div class="flex items-center justify-between md:flex-col md:space-y-4 md:items-start">
+                        <h2 id="current-hours" class="text-4xl text-white md:size-hour">--hrs</h2>
+                        <h3 id="last-hours" class="text-sm text-white opacity-70 md:size-last">Last -- - --hrs</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js" type="text/javascript"></script>
+    <script src="./data.json" type="text/javascript"></script>
+</body>
+
+</html>

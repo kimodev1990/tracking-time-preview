@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .size-hour {
+    font-size: clamp(2rem, -6.348rem + 17.391vw, 3rem);
+  }
+
+  .size-last {
+    font-size: clamp(0.6rem, -1.063rem + 3.465vw, 0.875rem);
+  }
+
+  .name-size {
+    font-size: clamp(2.25rem, -2.114rem + 9.091vw, 3rem);
+    line-height: clamp(2.5rem, -0.409rem + 6.061vw, 3rem);
+  }
+}
